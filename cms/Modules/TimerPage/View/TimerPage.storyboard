@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Timer Page View Controller-->
+        <scene sceneID="tfc-9m-C3G">
+            <objects>
+                <viewController storyboardIdentifier="TimerPageViewController" id="4hF-3I-UcZ" customClass="TimerPageViewController" customModule="CRM_Neolabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="GUW-F8-zGr">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="Nwn-Zo-uZ6">
+                                <rect key="frame" x="0.0" y="647" width="414" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="215" id="nhG-dD-a5g"/>
+                                </constraints>
+                                <locale key="locale" localeIdentifier="ru"/>
+                            </datePicker>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rFu-lX-mqr">
+                                <rect key="frame" x="0.0" y="89" width="414" height="88"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="88" id="XVA-pa-vfx"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Nha-KP-kMC">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Nha-KP-kMC" id="YIb-xN-Nki">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cKo-Y8-6it">
+                                <rect key="frame" x="0.0" y="88" width="414" height="1"/>
+                                <color key="backgroundColor" name="borderColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="Cun-LO-CeP"/>
+                                </constraints>
+                            </view>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="h66-pQ-56L">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" name="purple"/>
+                                <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <textAttributes key="largeTitleTextAttributes">
+                                    <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Таймер" id="cBD-DK-G7F">
+                                        <barButtonItem key="leftBarButtonItem" title="Отменить" id="cOd-Lr-lW2">
+                                            <connections>
+                                                <action selector="cancelTapped" destination="4hF-3I-UcZ" id="rfw-DV-dO7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="Сохранить" id="73v-jF-OqM">
+                                            <connections>
+                                                <action selector="saveTapped" destination="4hF-3I-UcZ" id="nn4-y3-L15"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="FUJ-Pa-6qb"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FUJ-Pa-6qb" firstAttribute="bottom" secondItem="Nwn-Zo-uZ6" secondAttribute="bottom" id="5tE-p9-ytT"/>
+                            <constraint firstItem="h66-pQ-56L" firstAttribute="top" secondItem="FUJ-Pa-6qb" secondAttribute="top" id="GHY-qQ-rhr"/>
+                            <constraint firstItem="FUJ-Pa-6qb" firstAttribute="trailing" secondItem="cKo-Y8-6it" secondAttribute="trailing" id="P7Z-15-Mo2"/>
+                            <constraint firstItem="rFu-lX-mqr" firstAttribute="top" secondItem="cKo-Y8-6it" secondAttribute="bottom" id="Vjy-kq-9v2"/>
+                            <constraint firstItem="Nwn-Zo-uZ6" firstAttribute="leading" secondItem="FUJ-Pa-6qb" secondAttribute="leading" id="YZ7-8o-MSC"/>
+                            <constraint firstItem="h66-pQ-56L" firstAttribute="leading" secondItem="GUW-F8-zGr" secondAttribute="leading" id="bFP-kI-95x"/>
+                            <constraint firstItem="FUJ-Pa-6qb" firstAttribute="trailing" secondItem="rFu-lX-mqr" secondAttribute="trailing" id="cFM-he-A5Z"/>
+                            <constraint firstItem="cKo-Y8-6it" firstAttribute="leading" secondItem="FUJ-Pa-6qb" secondAttribute="leading" id="mSo-4r-jt5"/>
+                            <constraint firstItem="cKo-Y8-6it" firstAttribute="top" secondItem="h66-pQ-56L" secondAttribute="bottom" id="nAE-xT-0jI"/>
+                            <constraint firstItem="Nwn-Zo-uZ6" firstAttribute="trailing" secondItem="FUJ-Pa-6qb" secondAttribute="trailing" id="qHZ-ta-Vie"/>
+                            <constraint firstItem="rFu-lX-mqr" firstAttribute="leading" secondItem="FUJ-Pa-6qb" secondAttribute="leading" id="qx6-KK-5WR"/>
+                            <constraint firstItem="FUJ-Pa-6qb" firstAttribute="trailing" secondItem="h66-pQ-56L" secondAttribute="trailing" id="zs1-fK-GRc"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cancelButton" destination="cOd-Lr-lW2" id="0L7-Wj-SHo"/>
+                        <outlet property="datePicker" destination="Nwn-Zo-uZ6" id="o6B-pu-ePr"/>
+                        <outlet property="saveButton" destination="73v-jF-OqM" id="TQV-kq-oS9"/>
+                        <outlet property="tableView" destination="rFu-lX-mqr" id="O7t-J8-fWk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rqj-MF-Ccn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="114" y="88"/>
+        </scene>
+    </scenes>
+    <resources>
+        <namedColor name="borderColor">
+            <color red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="purple">
+            <color red="0.50199997425079346" green="0.44699999690055847" blue="0.67500001192092896" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

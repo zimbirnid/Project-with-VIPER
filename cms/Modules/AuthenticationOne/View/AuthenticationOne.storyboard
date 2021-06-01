@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothaProMed.otf">
+            <string>GothamPro-Medium</string>
+        </array>
+        <array key="GothaProReg.otf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Authentication One View Controller-->
+        <scene sceneID="bJY-4b-Bo5">
+            <objects>
+                <viewController storyboardIdentifier="AuthenticationOneViewController" id="i8D-cz-Khx" customClass="AuthenticationOneViewController" customModule="CRM_Neolabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="w1q-ns-cED">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ebo-Hj-LtV" customClass="TextField" customModule="CRM_Neolabs" customModuleProvider="target">
+                                <rect key="frame" x="20" y="305.66666666666669" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="Op4-dh-H3R"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" textContentType="email"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topTitleText" value="Email"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WO4-bf-9q3" customClass="TextField" customModule="CRM_Neolabs" customModuleProvider="target">
+                                <rect key="frame" x="20" y="410.66666666666669" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="TR2-n5-zE6"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="eyeSlash"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="topTitleText" value="Пароль"/>
+                                </userDefinedRuntimeAttributes>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW7-MO-1N8" customClass="EnterButton" customModule="CRM_Neolabs" customModuleProvider="target">
+                                <rect key="frame" x="20" y="515.66666666666663" width="350" height="45"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="45" id="aqK-EY-9AB"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="20"/>
+                                <state key="normal" title="войти"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="4"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isInverseColor" value="NO"/>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neobisLogo" translatesAutoresizingMaskIntoConstraints="NO" id="vuv-vc-ayM">
+                                <rect key="frame" x="119" y="148.66666666666666" width="152" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="hX6-pW-Jqe"/>
+                                    <constraint firstAttribute="width" constant="152" id="lx0-gE-d80"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Вход" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWc-hd-RXD">
+                                <rect key="frame" x="157.33333333333334" y="198.66666666666666" width="75.666666666666657" height="27"/>
+                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="30"/>
+                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DZg-Gv-VZS" customClass="LinkButton" customModule="CRM_Neolabs" customModuleProvider="target">
+                                <rect key="frame" x="137" y="590.66666666666663" width="116" height="30"/>
+                                <state key="normal" title="Забыли пароль?"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3P-7V-13f" customClass="LinkButton" customModule="CRM_Neolabs" customModuleProvider="target">
+                                <rect key="frame" x="120.66666666666669" y="640.66666666666663" width="149" height="30"/>
+                                <state key="normal" title="Зарегистрироваться"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8yg-SH-eTZ"/>
+                        <color key="backgroundColor" name="white"/>
+                        <constraints>
+                            <constraint firstItem="Ebo-Hj-LtV" firstAttribute="top" secondItem="zWc-hd-RXD" secondAttribute="bottom" constant="80" id="6ui-BK-ZMi"/>
+                            <constraint firstItem="8yg-SH-eTZ" firstAttribute="trailing" secondItem="Ebo-Hj-LtV" secondAttribute="trailing" constant="20" id="6wa-ei-81B"/>
+                            <constraint firstItem="hW7-MO-1N8" firstAttribute="leading" secondItem="8yg-SH-eTZ" secondAttribute="leading" constant="20" id="DG9-Xv-k7J"/>
+                            <constraint firstItem="DZg-Gv-VZS" firstAttribute="top" secondItem="hW7-MO-1N8" secondAttribute="bottom" constant="30" id="FHW-Ex-Sts"/>
+                            <constraint firstItem="8yg-SH-eTZ" firstAttribute="trailing" secondItem="WO4-bf-9q3" secondAttribute="trailing" constant="20" id="LhD-H6-1K8"/>
+                            <constraint firstItem="w3P-7V-13f" firstAttribute="top" secondItem="DZg-Gv-VZS" secondAttribute="bottom" constant="20" id="LoQ-Z7-F0n"/>
+                            <constraint firstItem="DZg-Gv-VZS" firstAttribute="centerX" secondItem="w1q-ns-cED" secondAttribute="centerX" id="Pg2-UC-TD1"/>
+                            <constraint firstItem="Ebo-Hj-LtV" firstAttribute="leading" secondItem="8yg-SH-eTZ" secondAttribute="leading" constant="20" id="SWR-7J-E9d"/>
+                            <constraint firstItem="hW7-MO-1N8" firstAttribute="top" secondItem="WO4-bf-9q3" secondAttribute="bottom" constant="60" id="TSy-Hi-LJk"/>
+                            <constraint firstItem="zWc-hd-RXD" firstAttribute="centerY" secondItem="w1q-ns-cED" secondAttribute="centerY" multiplier="0.5" constant="1" id="UN5-oZ-vij"/>
+                            <constraint firstItem="8yg-SH-eTZ" firstAttribute="trailing" secondItem="hW7-MO-1N8" secondAttribute="trailing" constant="20" id="Uxx-4c-Kjo"/>
+                            <constraint firstItem="WO4-bf-9q3" firstAttribute="top" secondItem="Ebo-Hj-LtV" secondAttribute="bottom" constant="60" id="f8C-1w-rFj"/>
+                            <constraint firstItem="zWc-hd-RXD" firstAttribute="centerX" secondItem="w1q-ns-cED" secondAttribute="centerX" id="feb-tr-ucE"/>
+                            <constraint firstItem="WO4-bf-9q3" firstAttribute="leading" secondItem="8yg-SH-eTZ" secondAttribute="leading" constant="20" id="jtZ-83-0YK"/>
+                            <constraint firstItem="w3P-7V-13f" firstAttribute="centerX" secondItem="w1q-ns-cED" secondAttribute="centerX" id="ks5-b2-Ywj"/>
+                            <constraint firstItem="vuv-vc-ayM" firstAttribute="centerX" secondItem="zWc-hd-RXD" secondAttribute="centerX" id="sUA-nS-dmy"/>
+                            <constraint firstItem="zWc-hd-RXD" firstAttribute="top" secondItem="vuv-vc-ayM" secondAttribute="bottom" constant="20" id="tfo-4q-oMY"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="emailTextField" destination="Ebo-Hj-LtV" id="YRz-7H-Il0"/>
+                        <outlet property="enterButton" destination="hW7-MO-1N8" id="PwO-Re-6FK"/>
+                        <outlet property="forgetButton" destination="DZg-Gv-VZS" id="etD-Rp-m5Z"/>
+                        <outlet property="passwordTextField" destination="WO4-bf-9q3" id="iL1-m0-je3"/>
+                        <outlet property="registerButton" destination="w3P-7V-13f" id="n6m-lW-HSg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MWH-qc-agA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-266.15384615384613" y="93.127962085308056"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="DZg-Gv-VZS">
+            <size key="intrinsicContentSize" width="116" height="30"/>
+        </designable>
+        <designable name="Ebo-Hj-LtV">
+            <size key="intrinsicContentSize" width="6" height="18"/>
+        </designable>
+        <designable name="WO4-bf-9q3">
+            <size key="intrinsicContentSize" width="6" height="17"/>
+        </designable>
+        <designable name="hW7-MO-1N8">
+            <size key="intrinsicContentSize" width="61" height="30"/>
+        </designable>
+        <designable name="w3P-7V-13f">
+            <size key="intrinsicContentSize" width="149" height="30"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="eyeSlash" width="20" height="20"/>
+        <image name="neobisLogo" width="152" height="19"/>
+        <namedColor name="white">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

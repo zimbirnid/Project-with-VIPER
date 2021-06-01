@@ -1,0 +1,33 @@
+### Headers settings
+company: Neolabs
+
+### Xcode project settings
+project_name: cms_mobile
+xcodeproj_path: cms.xcodeproj
+
+### Code generation settings section
+# The main project target name
+project_target: cms
+
+# The file path for new modules
+project_file_path: cms/Modules
+
+# The Xcode group path to new modules
+project_group_path: cms/Modules
+
+### Tests generation settings section
+# The tests target name
+test_target: cmsTests
+
+# The file path for new tests
+test_file_path: cmsTests/Modules
+
+# The Xcode group path to new tests
+test_group_path: cmsTests/Modules
+
+### Dependencies settings section
+podfile_path: Podfile
+
+### Templates
+templates:
+- {name: swifty_viper}

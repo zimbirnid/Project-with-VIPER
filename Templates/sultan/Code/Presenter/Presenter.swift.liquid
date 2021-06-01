@@ -1,0 +1,34 @@
+//
+//  {{ module_info.name }}{{ module_info.file_name }}
+//  {{ module_info.project_name }}
+//
+//  Created by {{ developer.name }} on {{ date }}.
+//  Copyright © {{ year }} {{ developer.company }}. All rights reserved.
+//
+
+class {{ module_info.name }}Presenter {
+    weak var view: {{ module_info.name }}ViewInput!
+    var interactor: {{ module_info.name }}InteractorInput!
+    var router: {{ module_info.name }}RouterInput!
+}
+
+
+// MARK: - Module Input
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ModuleInput {}
+
+
+// MARK: - View Output
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}ViewOutput {
+    func viewIsReady() {
+        view.setupInitialState()
+    }
+}
+
+
+// MARK: - Interactor Output
+
+extension {{ module_info.name }}Presenter: {{ module_info.name }}InteractorOutput {
+
+}

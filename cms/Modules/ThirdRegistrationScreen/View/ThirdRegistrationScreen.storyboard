@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GothaProMed.otf">
+            <string>GothamPro-Medium</string>
+        </array>
+        <array key="GothaProReg.otf">
+            <string>GothamPro</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Third Registration Screen View Controller-->
+        <scene sceneID="6Xa-XD-QG8">
+            <objects>
+                <viewController storyboardIdentifier="ThirdRegistrationScreenViewController" id="20T-nE-6wH" customClass="ThirdRegistrationScreenViewController" customModule="CRM_Neolabs" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bY7-ld-iV5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vTk-PD-X2I">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rkC-ha-Tef">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="298.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Регистрация" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OS7-hk-xOl">
+                                                <rect key="frame" x="109.5" y="146.5" width="195.5" height="27"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="30"/>
+                                                <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="neobisLogo" translatesAutoresizingMaskIntoConstraints="NO" id="tAN-V3-ho9">
+                                                <rect key="frame" x="131" y="96.5" width="152" height="30"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="ce5-W6-mIh"/>
+                                                    <constraint firstAttribute="width" constant="152" id="rY6-TH-rPh"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GNm-oN-7ro" customClass="ProcessView" customModule="CRM_Neolabs" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="208.5" width="414" height="70"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="70" id="5BB-WT-h3a"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="select">
+                                                        <integer key="value" value="3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="firstText" value="Личные         данные"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="secondText" value="Контактные данные"/>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="thirdText" value="Придумать   пароль"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="GNm-oN-7ro" firstAttribute="top" secondItem="OS7-hk-xOl" secondAttribute="bottom" constant="35" id="IJF-8a-m7q"/>
+                                            <constraint firstAttribute="bottom" secondItem="GNm-oN-7ro" secondAttribute="bottom" constant="20" symbolic="YES" id="K4d-yJ-EWf"/>
+                                            <constraint firstItem="OS7-hk-xOl" firstAttribute="top" secondItem="tAN-V3-ho9" secondAttribute="bottom" constant="20" id="MP2-A4-olW"/>
+                                            <constraint firstItem="OS7-hk-xOl" firstAttribute="centerX" secondItem="rkC-ha-Tef" secondAttribute="centerX" id="S1I-Wq-a56"/>
+                                            <constraint firstItem="GNm-oN-7ro" firstAttribute="leading" secondItem="rkC-ha-Tef" secondAttribute="leading" id="TlQ-xb-uIJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="GNm-oN-7ro" secondAttribute="trailing" id="bx9-6d-ugU"/>
+                                            <constraint firstItem="tAN-V3-ho9" firstAttribute="centerX" secondItem="OS7-hk-xOl" secondAttribute="centerX" id="i6o-vN-9W1"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mRk-yq-Bky">
+                                        <rect key="frame" x="0.0" y="298.5" width="414" height="300"/>
+                                        <subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fZ0-Uk-OdZ" customClass="TextField" customModule="CRM_Neolabs" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="60" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="GLd-DV-ZyB"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="topTitleText" value="Пароль *"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="bottomTitleText" value="Пароль должен содержать не менее 8 символов"/>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="eyeSlash"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zqh-UW-Rgb" customClass="TextField" customModule="CRM_Neolabs" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="170" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="O5d-7M-ABb"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro" family="Gotham Pro" pointSize="17"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="password"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="topTitleText" value="Подтвердите пароль *"/>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="image" keyPath="buttonImage" value="eyeSlash"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </textField>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b2v-dQ-4fM" customClass="EnterButton" customModule="CRM_Neolabs" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="255" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Eds-eB-hIV"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
+                                                <state key="normal" title="ЗАРЕГИСТРИРОВАТЬСЯ"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isInverseColor" value="NO"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="zqh-UW-Rgb" secondAttribute="trailing" constant="20" id="4tb-1C-hK2"/>
+                                            <constraint firstItem="fZ0-Uk-OdZ" firstAttribute="leading" secondItem="mRk-yq-Bky" secondAttribute="leading" constant="20" id="Dbf-SV-tmi"/>
+                                            <constraint firstItem="zqh-UW-Rgb" firstAttribute="top" secondItem="fZ0-Uk-OdZ" secondAttribute="bottom" constant="65" id="Hyl-9Q-5aF"/>
+                                            <constraint firstAttribute="trailing" secondItem="fZ0-Uk-OdZ" secondAttribute="trailing" constant="20" id="KSJ-Fl-skC"/>
+                                            <constraint firstAttribute="trailing" secondItem="b2v-dQ-4fM" secondAttribute="trailing" constant="20" symbolic="YES" id="ZU1-W8-iub"/>
+                                            <constraint firstItem="fZ0-Uk-OdZ" firstAttribute="top" secondItem="mRk-yq-Bky" secondAttribute="top" constant="60" id="cOL-pM-0Ea"/>
+                                            <constraint firstItem="b2v-dQ-4fM" firstAttribute="top" secondItem="zqh-UW-Rgb" secondAttribute="bottom" constant="40" id="cYu-Vp-x93"/>
+                                            <constraint firstItem="b2v-dQ-4fM" firstAttribute="leading" secondItem="mRk-yq-Bky" secondAttribute="leading" constant="20" symbolic="YES" id="fxQ-45-noe"/>
+                                            <constraint firstItem="zqh-UW-Rgb" firstAttribute="leading" secondItem="mRk-yq-Bky" secondAttribute="leading" constant="20" id="g82-a9-eOZ"/>
+                                            <constraint firstAttribute="bottom" secondItem="b2v-dQ-4fM" secondAttribute="bottom" id="vNV-Kl-0XD"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IHX-yd-NEr">
+                                        <rect key="frame" x="0.0" y="598.5" width="414" height="125"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AUK-qm-2uj" customClass="EnterButton" customModule="CRM_Neolabs" customModuleProvider="target">
+                                                <rect key="frame" x="20" y="40" width="374" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="Vug-Np-pdX"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="GothamPro-Medium" family="Gotham Pro" pointSize="18"/>
+                                                <state key="normal" title="НАЗАД"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="4"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isInverseColor" value="YES"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="trailing" secondItem="AUK-qm-2uj" secondAttribute="trailing" constant="20" symbolic="YES" id="HiT-t9-2ck"/>
+                                            <constraint firstItem="AUK-qm-2uj" firstAttribute="top" secondItem="IHX-yd-NEr" secondAttribute="top" constant="40" id="T8G-7f-Tmt"/>
+                                            <constraint firstAttribute="bottom" secondItem="AUK-qm-2uj" secondAttribute="bottom" constant="40" id="cZE-KO-5dh"/>
+                                            <constraint firstItem="AUK-qm-2uj" firstAttribute="leading" secondItem="IHX-yd-NEr" secondAttribute="leading" constant="20" symbolic="YES" id="mMb-gR-DPy"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="rkC-ha-Tef" secondAttribute="trailing" id="6D3-xS-0y9"/>
+                                    <constraint firstItem="rkC-ha-Tef" firstAttribute="width" secondItem="vTk-PD-X2I" secondAttribute="width" id="AFe-jG-NlG"/>
+                                    <constraint firstItem="mRk-yq-Bky" firstAttribute="top" secondItem="rkC-ha-Tef" secondAttribute="bottom" id="Cpg-C6-syD"/>
+                                    <constraint firstItem="mRk-yq-Bky" firstAttribute="leading" secondItem="vTk-PD-X2I" secondAttribute="leading" id="Jrm-8i-4qo"/>
+                                    <constraint firstAttribute="trailing" secondItem="IHX-yd-NEr" secondAttribute="trailing" id="Vgq-DO-7fo"/>
+                                    <constraint firstItem="IHX-yd-NEr" firstAttribute="top" secondItem="mRk-yq-Bky" secondAttribute="bottom" id="WxO-5v-btt"/>
+                                    <constraint firstAttribute="trailing" secondItem="mRk-yq-Bky" secondAttribute="trailing" id="aFW-Q1-TZH"/>
+                                    <constraint firstItem="rkC-ha-Tef" firstAttribute="leading" secondItem="vTk-PD-X2I" secondAttribute="leading" id="aWY-4Z-Qg1"/>
+                                    <constraint firstAttribute="bottom" secondItem="IHX-yd-NEr" secondAttribute="bottom" id="meK-XP-yy4"/>
+                                    <constraint firstItem="IHX-yd-NEr" firstAttribute="leading" secondItem="vTk-PD-X2I" secondAttribute="leading" id="wxW-fL-hGs"/>
+                                    <constraint firstItem="rkC-ha-Tef" firstAttribute="top" secondItem="vTk-PD-X2I" secondAttribute="top" id="zf6-hs-Fa0"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="d16-1K-UFp"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="vTk-PD-X2I" firstAttribute="top" secondItem="bY7-ld-iV5" secondAttribute="top" id="59l-9s-Bck"/>
+                            <constraint firstItem="vTk-PD-X2I" firstAttribute="trailing" secondItem="d16-1K-UFp" secondAttribute="trailing" id="AAI-iT-N2I"/>
+                            <constraint firstItem="mRk-yq-Bky" firstAttribute="width" secondItem="bY7-ld-iV5" secondAttribute="width" id="KgQ-EI-Vew"/>
+                            <constraint firstItem="rkC-ha-Tef" firstAttribute="height" secondItem="bY7-ld-iV5" secondAttribute="height" multiplier="1/3" id="Ocf-r0-JAX"/>
+                            <constraint firstItem="vTk-PD-X2I" firstAttribute="leading" secondItem="d16-1K-UFp" secondAttribute="leading" id="Saw-Fe-cxE"/>
+                            <constraint firstAttribute="bottom" secondItem="vTk-PD-X2I" secondAttribute="bottom" id="ahc-a2-O7u"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="againPasswordTextField" destination="zqh-UW-Rgb" id="zpf-bj-c0z"/>
+                        <outlet property="backButton" destination="AUK-qm-2uj" id="q8D-Ag-JSa"/>
+                        <outlet property="nextButton" destination="b2v-dQ-4fM" id="uMq-Mn-DkR"/>
+                        <outlet property="passwordTextField" destination="fZ0-Uk-OdZ" id="1gK-dS-I5d"/>
+                        <outlet property="textFieldsView" destination="mRk-yq-Bky" id="ePG-tg-sM0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rue-jy-bCc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-265.21739130434787" y="93.75"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="AUK-qm-2uj">
+            <size key="intrinsicContentSize" width="62" height="33"/>
+        </designable>
+        <designable name="b2v-dQ-4fM">
+            <size key="intrinsicContentSize" width="214" height="33"/>
+        </designable>
+        <designable name="fZ0-Uk-OdZ">
+            <size key="intrinsicContentSize" width="21" height="17"/>
+        </designable>
+        <designable name="zqh-UW-Rgb">
+            <size key="intrinsicContentSize" width="21" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="eyeSlash" width="20" height="20"/>
+        <image name="neobisLogo" width="152" height="19"/>
+    </resources>
+</document>

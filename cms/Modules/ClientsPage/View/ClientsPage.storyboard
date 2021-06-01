@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Clients Page View Controller-->
+        <scene sceneID="euJ-xw-9ja">
+            <objects>
+                <viewController storyboardIdentifier="ClientsPageViewController" id="xto-Xn-qrX" customClass="ClientsPageViewController" customModule="cms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="IZA-Pg-V2U">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wOC-va-dty" customClass="TopBar" customModule="cms" customModuleProvider="target">
+                                <rect key="frame" x="15" y="44" width="384" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="VwN-De-jvx">
+                                <rect key="frame" x="8" y="90" width="398" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="lFM-NM-Ip0">
+                                <rect key="frame" x="7" y="166" width="400" height="730"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="uhS-V4-xra">
+                                    <size key="itemSize" width="369" height="149"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ClientCard" id="YOs-Cf-uVu" customClass="ClientCard" customModule="cms" customModuleProvider="target">
+                                        <rect key="frame" x="15.5" y="0.0" width="369" height="149"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Pnf-qr-SJb">
+                                            <rect key="frame" x="0.0" y="0.0" width="369" height="149"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="369" height="149"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GMv-Yd-jR2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lFM-NM-Ip0" firstAttribute="top" secondItem="VwN-De-jvx" secondAttribute="bottom" constant="20" id="2uo-Ei-H5m"/>
+                            <constraint firstItem="lFM-NM-Ip0" firstAttribute="leading" secondItem="GMv-Yd-jR2" secondAttribute="leading" constant="7" id="4JZ-hd-EI0"/>
+                            <constraint firstItem="wOC-va-dty" firstAttribute="top" secondItem="GMv-Yd-jR2" secondAttribute="top" constant="10" id="8Uo-4g-6wu"/>
+                            <constraint firstItem="GMv-Yd-jR2" firstAttribute="trailing" secondItem="lFM-NM-Ip0" secondAttribute="trailing" constant="7" id="90d-EZ-BJE"/>
+                            <constraint firstItem="GMv-Yd-jR2" firstAttribute="trailing" secondItem="wOC-va-dty" secondAttribute="trailing" constant="15" id="AIN-f4-fyt"/>
+                            <constraint firstItem="GMv-Yd-jR2" firstAttribute="trailing" secondItem="VwN-De-jvx" secondAttribute="trailing" constant="8" id="ES5-HN-Ofx"/>
+                            <constraint firstItem="VwN-De-jvx" firstAttribute="leading" secondItem="GMv-Yd-jR2" secondAttribute="leading" constant="8" id="K1i-ar-SfP"/>
+                            <constraint firstItem="VwN-De-jvx" firstAttribute="top" secondItem="wOC-va-dty" secondAttribute="bottom" constant="16" id="i1X-Zs-hAl"/>
+                            <constraint firstAttribute="bottom" secondItem="lFM-NM-Ip0" secondAttribute="bottom" id="iXX-BH-8lV"/>
+                            <constraint firstItem="wOC-va-dty" firstAttribute="leading" secondItem="GMv-Yd-jR2" secondAttribute="leading" constant="15" id="oaw-6d-HQ2"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="lFM-NM-Ip0" id="qzh-7y-gy5"/>
+                        <outlet property="searchBar" destination="VwN-De-jvx" id="dgV-v7-KIe"/>
+                        <outlet property="topBar" destination="wOC-va-dty" id="iSj-rB-zGr"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Urn-Tt-Jka" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="113.04347826086958" y="87.723214285714278"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

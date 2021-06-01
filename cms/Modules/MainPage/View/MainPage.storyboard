@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Page View Controller-->
+        <scene sceneID="I8r-4y-RTB">
+            <objects>
+                <viewController storyboardIdentifier="MainPageViewController" id="9um-BP-NYQ" customClass="MainPageViewController" customModule="cms" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="EfH-vg-qfG">
+                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="grZ-pU-3EU" customClass="SegmentView" customModule="cms" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="84" width="390" height="50"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                            <searchBar contentMode="redraw" ambiguous="YES" searchBarStyle="minimal" placeholder="Поиск" translatesAutoresizingMaskIntoConstraints="NO" id="bv9-52-eYE">
+                                <rect key="frame" x="8" y="141" width="374" height="56"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <scopeButtonTitles>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                    <string>Title</string>
+                                </scopeButtonTitles>
+                            </searchBar>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="QgS-mT-JGD">
+                                <rect key="frame" x="7" y="201" width="376" height="643"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bBC-ca-9U6">
+                                    <size key="itemSize" width="360" height="177"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MainCard" id="fkh-iS-W3r" customClass="MainCard" customModule="cms" customModuleProvider="target">
+                                        <rect key="frame" x="8" y="0.0" width="360" height="177"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="G84-63-Kqg">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="177"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <size key="customSize" width="360" height="177"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3Ta-ob-TZ2" customClass="TopBar" customModule="cms" customModuleProvider="target">
+                                <rect key="frame" x="15" y="54" width="360" height="30"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="jDC-IZ-XEc"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bv9-52-eYE" firstAttribute="leading" secondItem="jDC-IZ-XEc" secondAttribute="leading" constant="8" id="551-ld-ZNP"/>
+                            <constraint firstItem="grZ-pU-3EU" firstAttribute="leading" secondItem="jDC-IZ-XEc" secondAttribute="leading" id="CxA-Qc-8ps"/>
+                            <constraint firstItem="jDC-IZ-XEc" firstAttribute="trailing" secondItem="bv9-52-eYE" secondAttribute="trailing" constant="8" id="Das-A6-HD8"/>
+                            <constraint firstItem="QgS-mT-JGD" firstAttribute="leading" secondItem="jDC-IZ-XEc" secondAttribute="leading" constant="7" id="MaJ-9d-Yrn"/>
+                            <constraint firstItem="3Ta-ob-TZ2" firstAttribute="leading" secondItem="jDC-IZ-XEc" secondAttribute="leading" constant="15" id="NQL-dz-oaU"/>
+                            <constraint firstAttribute="bottom" secondItem="QgS-mT-JGD" secondAttribute="bottom" id="Nv3-w9-aR6"/>
+                            <constraint firstItem="jDC-IZ-XEc" firstAttribute="trailing" secondItem="3Ta-ob-TZ2" secondAttribute="trailing" constant="15" id="RbE-cI-Thn"/>
+                            <constraint firstItem="bv9-52-eYE" firstAttribute="top" secondItem="grZ-pU-3EU" secondAttribute="bottom" id="YFD-3d-KOE"/>
+                            <constraint firstItem="jDC-IZ-XEc" firstAttribute="trailing" secondItem="QgS-mT-JGD" secondAttribute="trailing" constant="7" id="hlk-fJ-Xfs"/>
+                            <constraint firstItem="jDC-IZ-XEc" firstAttribute="trailing" secondItem="grZ-pU-3EU" secondAttribute="trailing" id="nWM-2u-hiL"/>
+                            <constraint firstItem="3Ta-ob-TZ2" firstAttribute="top" secondItem="jDC-IZ-XEc" secondAttribute="top" constant="10" id="sMD-dV-GCs"/>
+                            <constraint firstItem="QgS-mT-JGD" firstAttribute="top" secondItem="bv9-52-eYE" secondAttribute="bottom" constant="15" id="uUX-Bw-ab1"/>
+                            <constraint firstItem="grZ-pU-3EU" firstAttribute="top" secondItem="3Ta-ob-TZ2" secondAttribute="bottom" constant="10" id="ygg-Gt-UZa"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="QgS-mT-JGD" id="iOz-iu-vFp"/>
+                        <outlet property="searchBar" destination="bv9-52-eYE" id="py6-Sf-B6b"/>
+                        <outlet property="segmentBar" destination="grZ-pU-3EU" id="7to-ku-CME"/>
+                        <outlet property="topBar" destination="3Ta-ob-TZ2" id="Pyu-xY-oSQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nbv-fm-umj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="118.46153846153845" y="145.73459715639811"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
